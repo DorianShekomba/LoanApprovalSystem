@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Page</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0;">
+    <div style="width: 90%; margin: 50px auto; text-align: center;">
+        <h1 style="color: #333;">Data Page</h1>
+        <table style="width: 100%; margin: 20px auto; border-collapse: collapse; background-color: white;">
+            <thead>
+                <tr>
+                    {% for col in columns %}
+                    <th style="padding: 10px; border: 1px solid #ccc; background-color: #007bff; color: white;">{{ col }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in data %}
+                <tr>
+                    {% for col in columns %}
+                    <td style="padding: 10px; border: 1px solid #ccc;">{{ row[col] }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="/" style="text-decoration: none; color: #007bff; padding: 10px 20px; background-color: #007bff; color: white; border-radius: 5px;">Back to Home</a>
+    </div>
+</body>
+</html>

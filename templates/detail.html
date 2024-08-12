@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Page</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0;">
+    <div style="width: 90%; margin: 50px auto; text-align: center;">
+        <h1 style="color: #333;">Detail Page for {{ row['NUMBER'] }}</h1>
+        <table style="width: 100%; margin: 20px auto; border-collapse: collapse; background-color: white;">
+            <tbody>
+                {% for key, value in row.items() %}
+                <tr>
+                    <th style="padding: 10px; border: 1px solid #ccc; background-color: #007bff; color: white;">{{ key }}</th>
+                    <td style="padding: 10px; border: 1px solid #ccc;">{{ value }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="/credit_score" style="text-decoration: none; color: #007bff; padding: 10px 20px; background-color: #007bff; color: white; border-radius: 5px;">Back to Credit Score Page</a>
+    </div>
+</body>
+</html>

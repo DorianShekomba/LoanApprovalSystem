@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Score Page</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0;">
+    <div style="width: 90%; margin: 50px auto; text-align: center;">
+        <h1 style="color: #333;">Credit Score Page</h1>
+        <form method="post" style="margin-bottom: 20px;">
+            <input type="text" name="search_number" placeholder="Search Number" style="padding: 5px; margin-right: 10px;">
+            <input type="number" name="tabvpm_min" placeholder="TABVPM Min" style="padding: 5px; margin-right: 10px;">
+            <input type="number" name="tabvpm_max" placeholder="TABVPM Max" style="padding: 5px; margin-right: 10px;">
+            <input type="number" name="fdy_min" placeholder="FDY Min" style="padding: 5px; margin-right: 10px;">
+            <input type="number" name="fdy_max" placeholder="FDY Max" style="padding: 5px; margin-right: 10px;">
+            <button type="submit" style="padding: 5px 10px; background-color: #007bff; color: white; border: none; border-radius: 5px;">Filter</button>
+        </form>
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
+            {% for row in data %}
+            <div style="border: 1px solid #ccc; padding: 20px; margin: 10px; background-color: #fff; width: 200px;">
+                <h2>{{ row['NUMBER'] }}</h2>
+                <p><a href="/detail/{{ row['NUMBER'] }}" style="text-decoration: none; color: #007bff;">Final Score: {{ row['Final Score'] }}</a></p>
+            </div>
+            {% endfor %}
+        </div>
+        <a href="/" style="text-decoration: none; color: #007bff; padding: 10px 20px; background-color: #007bff; color: white; border-radius: 5px;">Back to Home</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Score</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0;">
+    <div style="width: 90%; margin: 50px auto; text-align: center;">
+        <h1 style="color: #333;">Your Credit Score</h1>
+        <div style="border: 1px solid #ccc; padding: 20px; margin: 10px; background-color: #fff;">
+            <h2>Number: {{ data['NUMBER'] }}</h2>
+            <p>Final Score: {{ data['Final Score'] }}</p>
+        </div>
+        <a href="/logout" style="text-decoration: none; color: #007bff; padding: 10px 20px; background-color: #007bff; color: white; border-radius: 5px;">Logout</a>
+    </div>
+</body>
+</html>
